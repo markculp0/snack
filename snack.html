@@ -237,6 +237,101 @@ kable(snackBar[,1:6])</code></pre>
 <pre class="r"><code># So the serving size of the average snackbar is about 40 grams.
 sum(snackBar[,3]) / 9</code></pre>
 <pre><code>## [1] 41.22222</code></pre>
+<pre class="r"><code># Let's convert the calories, and the 
+# other variables to a 40 gram serving.
+# 48/40 = 1.2 
+# 190 /1.2 = 158 calories (zest)
+# 28/40 = 0.7
+# 100 / 0.7 = 143 calories (fig)
+
+# Compute calories based on 40 gram serving
+round((snackBar[,6])/(snackBar[,3]/40))</code></pre>
+<pre><code>## [1] 158 143 160 184 160 180 171 184 171</code></pre>
+<pre class="r"><code># Create dataframe for normalized values
+snackBar2 &lt;- data.frame(snackBar[,1:2],
+              ServeSize=40,
+              Calories=round((snackBar[,6])/(snackBar[,3]/40)),
+              FatTotal=round((snackBar[,7])/(snackBar[,3]/40),1)
+              )
+
+kable(snackBar2)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Brand</th>
+<th align="left">Product</th>
+<th align="right">ServeSize</th>
+<th align="right">Calories</th>
+<th align="right">FatTotal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Luna</td>
+<td align="left">Lemonzest</td>
+<td align="right">40</td>
+<td align="right">158</td>
+<td align="right">5.0</td>
+</tr>
+<tr class="even">
+<td align="left">Nature’s Bakery</td>
+<td align="left">BB Fig Bar</td>
+<td align="right">40</td>
+<td align="right">143</td>
+<td align="right">3.6</td>
+</tr>
+<tr class="odd">
+<td align="left">Kind</td>
+<td align="left">Vanilla BB Granola Bar</td>
+<td align="right">40</td>
+<td align="right">160</td>
+<td align="right">4.6</td>
+</tr>
+<tr class="even">
+<td align="left">belVita</td>
+<td align="left">Golden Oat Breakfast Biscuit</td>
+<td align="right">40</td>
+<td align="right">184</td>
+<td align="right">6.4</td>
+</tr>
+<tr class="odd">
+<td align="left">belVita</td>
+<td align="left">BB Almond Soft Baked Biscuit</td>
+<td align="right">40</td>
+<td align="right">160</td>
+<td align="right">6.4</td>
+</tr>
+<tr class="even">
+<td align="left">Quaker</td>
+<td align="left">Breakfast Flats BB Nut Bar</td>
+<td align="right">40</td>
+<td align="right">180</td>
+<td align="right">7.0</td>
+</tr>
+<tr class="odd">
+<td align="left">Nature Valley</td>
+<td align="left">Soft Baked Sugar Cinn Oatmeal Square</td>
+<td align="right">40</td>
+<td align="right">171</td>
+<td align="right">5.7</td>
+</tr>
+<tr class="even">
+<td align="left">Great Value</td>
+<td align="left">Golden Oat Breakfast Biscuit</td>
+<td align="right">40</td>
+<td align="right">184</td>
+<td align="right">6.4</td>
+</tr>
+<tr class="odd">
+<td align="left">Quaker</td>
+<td align="left">Chewy Yogurt Granola Bar</td>
+<td align="right">40</td>
+<td align="right">171</td>
+<td align="right">5.1</td>
+</tr>
+</tbody>
+</table>
+<p>Interesting. The thinnest bar has the highest “per gram” fat content.</p>
 </div>
 
 

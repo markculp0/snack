@@ -47,7 +47,29 @@ sum(snackBar[,3]) / 9
 # 28/40 = 0.7
 # 100 / 0.7 = 143 calories (fig)
 
+# Compute calories based on 40 gram serving
+round((snackBar[,6])/(snackBar[,3]/40))
+
+# Create dataframe for normalized values
+snackBar2 <- data.frame(snackBar[,1:2],
+              ServeSize=40,
+              Calories=round((snackBar[,6])/(snackBar[,3]/40)),
+              FatTotal=round((snackBar[,7])/(snackBar[,3]/40),1)
+              )
+
+kable(snackBar2)
 
 
 ```
+
+Interesting.  The thinnest bar has the highest "per gram" fat content.  The BB Fig bar is the winner, so far.  
+
+
+
+
+
+
+
+
+
 
