@@ -1,0 +1,10 @@
+Brand,Product,ServeSize,UnitType,UnitCnt,Calories,FatTotal,FatSat,FatTrans,FatPolyU,FatMonoU,FatUnk,Sugar,Sodium,Cholesterol,Protein,VitA,VitC,Calcium,Iron
+Luna,Lemonzest,48,bar,1,190,6,2.5,0,1,2,0.5,9,95,0,8,0.10,0.15,0.35,0.20
+Nature's Bakery,BB Fig Bar,28,bar,2,100,2.5,0,0,0,0,2.5,10,40,0,1,0,0,0.02,0.02
+Kind,Vanilla BB Granola Bar,35,bar,1,140,4,0,0,0,0,4,7,75,0,2,0,0.02,0.02,0.06
+belVita,Golden Oat Breakfast Biscuit,50,biscuit,4,230,8,0.5,0,2.5,5,0,11,220,0,4,0,0,0,0.10
+belVita,BB Almond Soft Baked Biscuit,50,biscuit,1,200,8,1,0,2,4,1,11,220,10,10,0,0,0.06,0.10
+Quaker,Breakfast Flats BB Nut Bar,40,bar,3,180,7,0.5,0,0,0,6.5,9,140,0,3,0,0,0.06,0.06
+Nature Valley,Soft Baked Sugar Cinn Oatmeal Square,35,square,1,150,5,1,0,0,0,4,9,130,20,2,0,0,0,0.04
+Great Value,Golden Oat Breakfast Biscuit,50,bar,4,230,8,0.5,0,2.5,5,0,10,180,0,3,0,0,0,0.20
+Quaker,Chewy Yogurt Granola Bar,35,bar,1,150,4.5,2.5,0,0.5,1,0.5,11,110,0,2,0,0,0.10,0.02

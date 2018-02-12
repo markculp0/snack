@@ -1,0 +1,53 @@
+---
+title: "Snack Bar Nutrition Analysis"
+author: "Mark Culp"
+date: "2/5/2018"
+output: html_document
+---
+##### ServeSize, Fat, Sugar, Protein = grams
+##### Sodium, Cholesterol = milligrams
+##### VitA,VitC,Calcium,Iron = % of 2K calorie/day diet
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+
+
+```
+
+### Load the dataset
+
+```{r }
+
+# Read rows
+snackBar <- read.csv("snackBar.csv",header = F, skip = 1)
+
+# Read col headers
+h1 <- readLines("snackBar.csv",1)
+h1 <- strsplit(h1,",", fixed = T)
+names(snackBar) <- make.names(h1[[1]])
+rm(h1)
+
+```
+
+### Examine the dataset
+
+```{r fig.align="center"}
+library(knitr)
+
+kable(snackBar[,1:6])
+
+# So the serving size of the average snackbar is about 40 grams.
+sum(snackBar[,3]) / 9
+
+# Let's convert the calories, and the 
+# other variables to a 40 gram serving.
+# 48/40 = 1.2 
+# 190 /1.2 = 158 calories (zest)
+# 28/40 = 0.7
+# 100 / 0.7 = 143 calories (fig)
+
+
+
+```
+
